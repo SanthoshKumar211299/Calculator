@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Calculator</h1>
+        <p id="description">This is a calculator implemented using DOM manipulation. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator interface is responsive and can be used on various screen sizes. Users can input numbers and operators either by clicking on the buttons or by using keyboard events. Only numbers are allowed as input, and an alert message will be shown if any other keys are pressed.</p>
+
+        <div id="calculator">
+            <input type="text" id="result" value=0 readonly  style="background-color:#b9b9b9;height: 60px;">
+            <div class="buttons">
+                <button id="clear" class="btn btn-primary" onclick="clearResult()" style="color: red;">C</button>
+                <button id="Space" class="btn btn-primary" onclick="addSpace()" style="color: black;position: relative;left: 10px;">←</button>
+                <button class="btn btn-primary" onclick="appendInput('.')" style="color: blue;">.</button>
+                <button class="btn btn-primary" onclick="appendInput('*')" style="color: blue;position: relative;right: 12px;">x</button>
+                <button class="btn btn-primary" onclick="appendInput('7')" style="color: black;">7</button>
+                <button class="btn btn-primary" onclick="appendInput('8')" style="color: black;position: relative;left: 10px;">8</button>
+                <button class="btn btn-primary" onclick="appendInput('9')" style="color: black;">9</button>
+                <button class="btn btn-primary" onclick="appendInput('/')"style= "color: blue;position: relative;right: 12px;">÷</button>
+                <button class="btn btn-primary" onclick="appendInput('4')" style="color: black;">4</button>
+                <button class="btn btn-primary" onclick="appendInput('5')" style="color: black;position: relative;left: 12px;">5</button>
+                <button class="btn btn-primary" onclick="appendInput('6')" style="color: black;position: relative;left: 2px;">6</button>
+                <button  id="subtract" class="btn btn-primary" onclick="appendInput('-')" style="color: blue;position: relative;right: 12px;">-</button>
+                <button id="1" class="btn btn-primary" onclick="appendInput('1')" style="color: black;">1</button>
+                <button id="2" class="btn btn-primary" onclick="appendInput('2')" style="color: black;position: relative;left: 12px;">2</button>
+                <button id="3" class="btn btn-primary" onclick="appendInput('3')" style="color: black;position: relative;left: 4px;">3</button>
+                <button  id="add" class="btn btn-primary" onclick="appendInput('+')"style="color: blue;position: relative;right: 12px;">+</button>
+                <button class="btn btn-primary" onclick="appendInput('0')" style="color: black;">0</button>
+                <button class="btn btn-primary" onclick="appendInput('00')" style="color: black;position: relative;left: 12px;">00</button>
+                
+<button id="equal" class="btn btn-primary" onclick="calculate()"style="color: black;background-color:#0d6efd;position: relative;left:45px;height:50px;width:100px">=</button>
+                
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
